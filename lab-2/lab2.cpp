@@ -19,8 +19,6 @@ int main(){
     for (int i = 0; i < n; i++){
         std::string target = arr[i];
         for (int j = 0; j < n; j++) {
-        // Check if the current element equals the target
-        // number
         if (arr[j] == target) {
             counter++;
         }
