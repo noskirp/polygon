@@ -16,12 +16,15 @@ public:
         }
         --layerCount;
         int minBoxes = layerCount * (layerCount + 1) / 2;
+        cout << minBoxes << " ";
+        cout << totalFullFloors << " ";
       
-        layerCount = 1;
+        
+        int addLayer = 1;
         while (totalFullFloors < totalCuboids) {
             minBoxes++;
-            totalFullFloors += layerCount;
-            ++layerCount;
+            totalFullFloors += addLayer;
+            ++addLayer;
         }
         return minBoxes;
     }
@@ -29,5 +32,5 @@ public:
 Solution obj;
 
 int main(){
-    cout << obj.minimumBoxes(13) << " ";
+    cout << obj.minimumBoxes(16) << " ";
 }
