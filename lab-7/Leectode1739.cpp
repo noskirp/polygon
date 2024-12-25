@@ -16,10 +16,8 @@ public:
         }
         --layerCount;
         int bottomCubes = layerCount * (layerCount + 1) / 2;
-        cout << layerCount << " ";
-        cout << totalFullFloors << " ";
-      
         
+      
         int addLayer = 1;
         while (totalFullFloors < totalCubes) {
             bottomCubes++;
