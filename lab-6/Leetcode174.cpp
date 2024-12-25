@@ -5,7 +5,7 @@
 using namespace std;
 
 class Solution {
-    int solve(vector<vector<int>> dungeon, int i, int j, int n, int m, vector<vector<int>> &solved) {
+    int solve(vector<vector<int>> &dungeon, int i, int j, int n, int m, vector<vector<int>> &solved) {
         if (i >= n || j >= m) return 1e9;
         if (i == n - 1 && j == m - 1) {
             if (dungeon[i][j] > 0) return 1;
@@ -31,10 +31,9 @@ public:
 int main() {
     Solution sol;
 
-    // Example dungeon input
     vector<vector<int>> dungeon = {
-        {-2, -3, 3},
-        {-5, -10, 1},
+        {-2, -15, 3},
+        {-6, -10, 1},
         {10, 30, -5}
     };
 

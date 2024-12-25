@@ -26,8 +26,15 @@ public:
         return minBoxes;
     }
 };
-Solution obj;
 
-int main(){
-    cout << obj.minimumBoxes(13) << " ";
+
+int main() {
+    Solution sol;
+
+    int totalCuboids = 4;
+
+    int result = sol.minimumBoxes(totalCuboids);
+    cout << "Minimum HP required: " << result << endl;
+
+    return 0;
 }
