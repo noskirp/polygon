@@ -7,30 +7,30 @@ using namespace std;
 
 class Solution {
 public:
-    int minimumBoxes(int totalCuboids) {
+    int minimumBoxes(int totalCubes) {
         int totalFullFloors = 0, layerCount = 1;
 
-        while (totalFullFloors + layerCount * (layerCount + 1) / 2 <= totalCuboids) {
+        while (totalFullFloors + layerCount * (layerCount + 1) / 2 <= totalCubes) {
             totalFullFloors += layerCount * (layerCount + 1) / 2;
             ++layerCount;
         }
         --layerCount;
-        int minBoxes = layerCount * (layerCount + 1) / 2;
-        cout << minBoxes << " ";
+        int bottomCubes = layerCount * (layerCount + 1) / 2;
+        cout << layerCount << " ";
         cout << totalFullFloors << " ";
       
         
         int addLayer = 1;
-        while (totalFullFloors < totalCuboids) {
-            minBoxes++;
+        while (totalFullFloors < totalCubes) {
+            bottomCubes++;
             totalFullFloors += addLayer;
             ++addLayer;
         }
-        return minBoxes;
+        return bottomCubes;
     }
 };
 Solution obj;
 
 int main(){
-    cout << obj.minimumBoxes(16) << " ";
+    cout << obj.minimumBoxes(15) << " ";
 }
