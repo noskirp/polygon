@@ -12,7 +12,7 @@ int main() {
         numbers[i] = i + 1;  // Заполняем числами от 1 до n
     }
 
-    for (int i = 11; i <= 50; i ++) {
+    for (int i = 1; i <= 10; i ++) {
         // Перемешиваем массив с использованием random_device и mt19937
         std::random_device rd;
         std::mt19937 g(rd());
@@ -20,8 +20,6 @@ int main() {
 
         // Сохраняем массив в CSV файл
         std::string filename = std::to_string(n) + "_" + std::to_string(i) + ".csv";
-        // std::cout << "Enter file name: ";
-        // std::cin >> filename;
 
         std::ofstream outFile(filename);
         if (!outFile) {
